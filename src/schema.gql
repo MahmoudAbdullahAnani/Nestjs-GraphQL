@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """id on this user"""
+  id: String!
+  name: String!
+  email: String!
+  phoneNumber: String
+}
+
+type Users {
+  statue: Int!
+  data: [User!]!
+  count: Int!
+}
+
+type Query {
+  getUsers: Users!
+  getUser(id: String!): User!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  phoneNumber: String
+}
